@@ -1,0 +1,42 @@
+host: LAPTOP-S92C04ES
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job stats:
+job        count
+-------  -------
+bwa_map        2
+total          2
+
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sat Jan 11 15:52:22 2025]
+localrule bwa_map:
+    input: genome.fa, samples/A.fastq
+    output: mapped_reads/A.bam
+    jobid: 1
+    reason: Updated input files: samples/A.fastq
+    wildcards: sample=A
+    resources: tmpdir=/tmp
+
+[Sat Jan 11 15:52:23 2025]
+Finished job 1.
+1 of 2 steps (50%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sat Jan 11 15:52:23 2025]
+localrule bwa_map:
+    input: genome.fa, samples/C.fastq
+    output: mapped_reads/C.bam
+    jobid: 0
+    reason: Missing output files: mapped_reads/C.bam
+    wildcards: sample=C
+    resources: tmpdir=/tmp
+
+[Sat Jan 11 15:52:23 2025]
+Finished job 0.
+2 of 2 steps (100%) done
+Complete log: .snakemake/log/2025-01-11T155222.278199.snakemake.log
